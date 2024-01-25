@@ -1,0 +1,41 @@
+{
+  "name": "mern-auth-boilerplate",
+  "version": "1.0.0",
+  "description": "MERN auth boilerplate",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix ../client",
+    "db": "mongod --dbpath ./db/data",
+    "dev": "concurrently \"npm run server\" \"npm run db\""
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "config": "^3.2.5",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.17.1",
+    "express-validator": "^6.3.1",
+    "form-data": "^4.0.0",
+    "is-empty": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mailgun-js": "^0.22.0",
+    "mailgun.js": "^9.2.0",
+    "mongoose": "^5.8.9",
+    "mongoose-paginate-v2": "^1.7.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.3",
+    "nodemon": "^2.0.19",
+    "paypal-rest-sdk": "^1.8.1",
+    "validator": "^10.11.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.2"
+  }
+}
